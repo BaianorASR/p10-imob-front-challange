@@ -7,6 +7,9 @@ module.exports = {
         'imob-blue': '#004d8b',
         'imob-orange': '#fd8402',
       },
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+      },
     },
   },
   plugins: [],

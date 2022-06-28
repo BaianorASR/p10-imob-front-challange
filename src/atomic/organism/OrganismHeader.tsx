@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { FC } from 'react';
 
 import { MoleculeDropdown } from '../molecules/MoleculeDropdown';
 
-export function OrganismHeader() {
+export const OrganismHeader: FC = () => {
   return (
     <header className="h-14 border">
       <div className="flex mx-auto items-center border h-full justify-between max-w-6xl px-2">
@@ -23,4 +23,4 @@ export function OrganismHeader() {
       </div>
     </header>
   );
-}
+};

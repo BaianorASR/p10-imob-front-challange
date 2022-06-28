@@ -1,11 +1,17 @@
 import type { GetStaticProps, NextPage } from 'next';
 
+import { TemplatePosts } from '../atomic/templates/TemplatePosts';
+import type { IPost } from '../interfaces/IPost';
 import postAPI from '../services/postAPI';
 
-const Home: NextPage = () => {
+type HomeProps = {
+  arrayOfPosts: IPost[];
+};
+
+const Home: NextPage<HomeProps> = ({ arrayOfPosts }) => {
   return (
     <div>
-      <h1>HELLO WORLD</h1>
+      <TemplatePosts arrayOfPosts={arrayOfPosts} />
     </div>
   );
 };
@@ -15,8 +21,9 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      posts: data,
+      arrayOfPosts: data,
     },
+    revalidate: 60 * 60 * 24, // 1 day
   };
 };
 
