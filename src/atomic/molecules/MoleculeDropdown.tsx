@@ -1,4 +1,5 @@
 import { Menu, Transition } from '@headlessui/react';
+import { List } from 'phosphor-react';
 import { FC, Fragment } from 'react';
 
 export const MoleculeDropdown: FC = () => {
@@ -6,8 +7,8 @@ export const MoleculeDropdown: FC = () => {
     <div className="text-right">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center rounded-md bg-imob-blue-500 bg-opacity-80 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-            Options
+          <Menu.Button className="bg-imob-blue-500 bg-opacity-80 hover:bg-opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 inline-flex justify-center w-full px-1 py-1 text-sm font-medium text-white rounded-md">
+            <List size={24} weight="duotone" />
           </Menu.Button>
         </div>
         <Transition
@@ -19,7 +20,7 @@ export const MoleculeDropdown: FC = () => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="ring-1 ring-black ring-opacity-5 focus:outline-none absolute right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg">
             <div className="p-1">
               <Menu.Item>
                 {({ active }) => (

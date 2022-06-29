@@ -9,7 +9,7 @@ import { MoleculeFooterSocialMedias } from '../molecules/MoleculeFooterSocialMed
 export const OrganismFooter: React.FC = () => {
   return (
     <footer className="bg-imob-blue-200 flex flex-col justify-between mx-auto text-xs font-light shadow-inner">
-      <Container className="px-2 pt-2">
+      <Container className="px-2 py-3">
         <div className="sm:flex-row sm:justify-between sm:w-full flex flex-col items-center">
           <Image
             src="/images/logo-imob.png"

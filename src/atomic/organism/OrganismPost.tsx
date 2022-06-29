@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { FC } from 'react';
 
@@ -13,11 +12,9 @@ export const OrganismPost: FC<OrganismPostProps> = ({ post }) => {
   const { push } = useRouter();
 
   return (
-    <Link href={`/post/${post.id}`}>
-      <MoleculePostCard
-        postTitle={post.title}
-        navigateToPost={() => push(`/post/${post.id}`)}
-      />
-    </Link>
+    <MoleculePostCard
+      postTitle={post.title}
+      navigateToPost={() => push(`/post/${post.id}`)}
+    />
   );
 };

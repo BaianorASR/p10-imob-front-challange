@@ -13,11 +13,11 @@ export const MoleculeFooterInfos: React.FC = () => {
         <AtomText>Privacidade</AtomText>
       </div>
       <div className=" flex flex-col gap-1">
-        <AtomText>Termos e condições</AtomText>
-        <AtomText>Contato</AtomText>
-        <AtomText>Trabalhe Conosco</AtomText>
-        <AtomText>Informações de seguros</AtomText>
-        <AtomText>Privacidade</AtomText>
+        <AtomText>Sobre</AtomText>
+        <AtomText>Atendimento</AtomText>
+        <AtomText>Vire membro</AtomText>
+        <AtomText>Santaluz, Bahia</AtomText>
+        <AtomText>4002 8022</AtomText>
       </div>
     </div>
   );
