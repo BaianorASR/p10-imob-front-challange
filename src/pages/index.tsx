@@ -11,10 +11,10 @@ type HomeProps = {
 
 const Home: NextPage<HomeProps> = ({ arrayOfPosts }) => {
   return (
-    <div>
+    <>
       <OrganismHero />
       <TemplatePosts arrayOfPosts={arrayOfPosts} />
-    </div>
+    </>
   );
 };
 
