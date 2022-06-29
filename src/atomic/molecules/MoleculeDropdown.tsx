@@ -6,7 +6,7 @@ export const MoleculeDropdown: FC = () => {
     <div className="text-right">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center rounded-md bg-imob-blue bg-opacity-80 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <Menu.Button className="inline-flex w-full justify-center rounded-md bg-imob-blue-500 bg-opacity-80 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             Options
           </Menu.Button>
         </div>
@@ -25,7 +25,7 @@ export const MoleculeDropdown: FC = () => {
                 {({ active }) => (
                   <a
                     className={`${
-                      active ? 'bg-imob-blue text-white' : 'text-gray-900'
+                      active ? 'bg-imob-blue-500 text-white' : 'text-gray-900'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
                     Edit
@@ -36,7 +36,7 @@ export const MoleculeDropdown: FC = () => {
                 {({ active }) => (
                   <a
                     className={`${
-                      active ? 'bg-imob-blue text-white' : 'text-gray-900'
+                      active ? 'bg-imob-blue-500 text-white' : 'text-gray-900'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                     href="https://www.google.com"
                     target="_blank"

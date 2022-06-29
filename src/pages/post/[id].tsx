@@ -17,9 +17,11 @@ const PostDetails: NextPage<PostDetailsProps> = ({ id }) => {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <div>
-      <h1 className="text-imob-blue text-lg font-bold">{data[0].title}</h1>
-      <p className="text-sm">{data[0].body}</p>
+    <div className="container flex flex-col h-screen">
+      <div className="gap-14 flex flex-col p-2">
+        <h1 className="text-imob-blue-500 mt-10 text-3xl font-black">{data[0].title}</h1>
+        <p className="text-xl font-light">{data[0].body}</p>
+      </div>
     </div>
   );
 };

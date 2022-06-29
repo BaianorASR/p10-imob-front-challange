@@ -5,8 +5,8 @@ import { MoleculeDropdown } from '../molecules/MoleculeDropdown';
 
 export const OrganismHeader: FC = () => {
   return (
-    <header className="h-14 border">
-      <div className="flex mx-auto items-center border h-full justify-between max-w-6xl px-2">
+    <header className="h-14 fixed top-0 w-full bg-white border-b">
+      <div className="container flex items-center justify-between h-full px-2 mx-auto">
         <div className="flex w-[200px]">
           <Image
             src="/images/logoimob.png"
@@ -16,8 +16,8 @@ export const OrganismHeader: FC = () => {
             layout="fixed"
           />
         </div>
-        <div className="flex gap-4 items-center">
-          <p className=" flex">75 9922828-8282</p>
+        <div className="flex items-center gap-4">
+          {/* <p className=" flex">75 9922828-8282</p> */}
           <MoleculeDropdown />
         </div>
       </div>
