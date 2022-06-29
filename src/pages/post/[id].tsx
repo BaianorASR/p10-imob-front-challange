@@ -2,29 +2,24 @@ import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
 
+import { MoleculeLoadingPostDetails } from '../../atomic/molecules/MoleculeLoadingPostDetails';
+import { OrganismPostDetails } from '../../atomic/organism/OrganismPostDetails';
 import { useRequest } from '../../hooks/useSWR';
 import type { IPost } from '../../interfaces/IPost';
+import { Container } from '../../layout/container';
 
-type PostDetailsProps = {
-  id: number;
-};
-
-const PostDetails: NextPage<PostDetailsProps> = ({ id }) => {
+const PostDetails: NextPage = () => {
   const { query } = useRouter();
-
   const { data } = useRequest<IPost>({
     url: `https://jsonplaceholder.typicode.com/posts/${query.id}`,
   });
 
-  if (!data) return <div>Loading...</div>;
-  console.log(data);
+  if (!data) return <MoleculeLoadingPostDetails />;
+
   return (
-    <div className="container flex flex-col h-screen">
-      <div className="gap-14 flex flex-col p-2">
-        <h1 className="text-imob-blue-500 mt-10 text-3xl font-black">{data.title}</h1>
-        <p className="text-xl font-light">{data.body}</p>
-      </div>
-    </div>
+    <Container className="h-screen">
+      <OrganismPostDetails post={data} />
+    </Container>
   );
 };
 
